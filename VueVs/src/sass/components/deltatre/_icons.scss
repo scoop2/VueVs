@@ -1,0 +1,168 @@
+.gdx-bg {
+  fill: $lead-color;
+  transition: fill 0.5s;
+}
+
+#icon-gdx:hover {
+  .gdx-bg {
+    fill: $atmo-color;
+    transition: fill ease 0.5s;
+  }
+}
+
+.gdcp-bg {
+  @extend .gdx-bg;
+}
+
+#icon-gdcp:hover {
+  @extend #icon-gdx:hover;
+}
+
+.gddp-bg {
+  @extend .gdx-bg;
+}
+
+#icon-gddp:hover {
+  @extend #icon-gdx:hover;
+}
+
+.iconLogout {
+  fill: #ffffff;
+  transition: fill 0.5s;
+}
+
+#iconLogout:hover {
+  .iconLogout {
+    fill: $atmo-color;
+    transition: fill ease 0.5s;
+  }
+}
+
+.iconExcel-1 {
+  fill: #ffffff;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  transition: fill 0.5s;
+}
+
+.iconExcel-2 {
+  fill: $atmo-color-alt1;
+  transition: fill 0.5s;
+}
+
+.iconExcel-3 {
+  fill: $atmo-color-alt1;
+  transition: fill 0.5s;
+}
+
+#iconExcel:hover {
+  .iconExcel-1 {
+    fill: $atmo-color;
+    transition: fill ease 1s;
+  }
+}
+
+.gdxp-arrow {
+  fill: #2980b9;
+}
+
+.gdcp-arrow {
+  @extend .gdxp-arrow;
+}
+
+.gddp-arrow {
+  @extend .gdxp-arrow;
+}
+
+.gdxp-text {
+  font-family: "Regular";
+  letter-spacing: 0.1vh;
+}
+
+.gdcp-text {
+  @extend .gdxp-text;
+}
+
+.gddp-text {
+  @extend .gdxp-text;
+}
+
+.icon-text {
+  font-size: 155px;
+  font-family: "Bold";
+  fill: #cccccc;
+  letter-spacing: 200px;
+}
+
+.arrowDown {
+  fill: $atmo-color;
+  height: 30px;
+  width: 30px;
+}
+
+.arrow-up {
+  pointer-events: none;
+  fill: $bg-color;
+  opacity: 0;
+}
+
+.arrow-down {
+  pointer-events: none;
+  fill: $bg-color;
+  opacity: 1;
+}
+
+@mixin pagicons {
+  height: 35px;
+  width: 35px;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pagFB  {@include pagicons;}
+.pagB   {@include pagicons;}
+.pagF   {@include pagicons;}
+.pagFF  {@include pagicons;}
+
+.icon-edit {
+  fill: $lead-color;
+  height: 20px;
+  width: 20px;
+  stroke-width: 3px;
+  filter: drop-shadow(0 1px 2px #000);
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity .3s ease-out;
+  margin-top: -12px;
+}
+.icon-ok {
+  display: none;
+  width: 22px;
+  height: 22px;
+  stroke-width: 8px;
+  fill: #aeaeae;
+  //filter: drop-shadow(0 0 3px #141414);
+  cursor: pointer;
+  opacity: .5;
+  transition: fill 0.2s ease-out;
+}
+
+.icon-zoom {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  stroke-width: 0;
+  fill: $atmo-color;
+  filter: drop-shadow(0 0 4px #141414);
+}
+.icon-pencil {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  stroke-width: 0;
+  fill: $atmo-color;
+  filter: drop-shadow(0 0 4px #141414);
+}

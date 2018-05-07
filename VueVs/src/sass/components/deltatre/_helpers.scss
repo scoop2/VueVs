@@ -1,0 +1,35 @@
+/*
+|--------------------------------------------------------------------------
+| Helpers
+|--------------------------------------------------------------------------
+*/
+.defMargin {
+  margin: 6px;}
+.paddingLR {
+  padding: 0 6px 0 6px;}
+.space10 {
+  height: 10px;}
+.space20 {
+  height: 20px;}
+.space50 {
+  height: 50px;}
+.space95 {
+  height: 65px;}
+.floatLeft {
+  float: left;}
+.floatRight {
+  float: right;}
+.clear {
+  clear: both;}
+
+.valign {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.displayOn {
+  display: inline-block;
+}
+.displayOff {
+  display: none;
+}

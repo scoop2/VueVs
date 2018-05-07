@@ -1,0 +1,235 @@
+/*
+|--------------------------------------------------------------------------
+| Overwrites
+|--------------------------------------------------------------------------
+*/
+
+body {
+  background-color: $bg-color;
+  font-family: $font-regular;
+  font-size: 15px;
+  color: $color;
+}
+nav {
+  height: 50px;
+  line-height: 50px;
+  background-color: transparent;
+  box-shadow: unset;
+}
+hr {
+  border: 2px solid white;
+}
+
+input {
+  color: $lead-color;
+}
+label {
+  font-size: 1em;
+  color: #D7D7D7;
+}
+th {
+  text-align: center;
+  vertical-align: top;
+  width: 10%;
+}
+td {
+  text-align: center;
+}
+.td-icons {
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: #353535;
+}
+a {
+  text-decoration: underline;
+  transition: color 0.4s;
+}
+a:hover {
+  //text-decoration:underline overline;
+  color: $atmo-color;
+}
+h1 {
+  font-size: 1vw;
+}
+h2 {
+  font-size: 1.4vw;
+}
+h3 {
+  font-size: 1.8vw;
+}
+h4 {
+  font-size: 2vw;
+}
+h5 {
+  font-size: 2.2vw;
+}
+
+.btn {
+  background-color: $atmo-color;
+}
+.btn:hover {
+  background-color: $atmo-color-sec4;
+}
+.dropdown-content {
+  background-color: #404040;
+}
+.dropdown-content li > span {
+  color: #DFDFDF;
+}
+input:not([type]):disabled,
+input:not([type])[readonly="readonly"],
+input[type="date"]:not(.browser-default):disabled,
+input[type="date"]:not(.browser-default)[readonly="readonly"],
+input[type="datetime-local"]:not(.browser-default):disabled,
+input[type="datetime-local"]:not(.browser-default)[readonly="readonly"],
+input[type="datetime"]:not(.browser-default):disabled,
+input[type="datetime"]:not(.browser-default)[readonly="readonly"],
+input[type="email"]:not(.browser-default):disabled, input[type="email"]:not(.browser-default)[readonly="readonly"],
+input[type="number"]:not(.browser-default):disabled, input[type="number"]:not(.browser-default)[readonly="readonly"],
+input[type="password"]:not(.browser-default):disabled, input[type="password"]:not(.browser-default)[readonly="readonly"],
+input[type="search"]:not(.browser-default):disabled, input[type="search"]:not(.browser-default)[readonly="readonly"],
+input[type="tel"]:not(.browser-default):disabled, input[type="tel"]:not(.browser-default)[readonly="readonly"],
+input[type="text"]:not(.browser-default):disabled, input[type="text"]:not(.browser-default)[readonly="readonly"],
+input[type="time"]:not(.browser-default):disabled, input[type="time"]:not(.browser-default)[readonly="readonly"],
+input[type="url"]:not(.browser-default):disabled, input[type="url"]:not(.browser-default)[readonly="readonly"],
+textarea.materialize-textarea:disabled, textarea.materialize-textarea[readonly="readonly"] {
+  color: $disabled-color;
+  border-bottom: 1px dotted $disabled-color;
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup {
+  color: $disabled-color;
+}
+
+.switch label .lever {
+  background-color: $table-head-bgcolor;
+}
+
+/*
+|--------------------------------------------------------------------------
+| getMatches
+|--------------------------------------------------------------------------
+*/
+.input-field {
+  margin-top: 0;
+}
+
+.collapsible {
+  color: $lead-color;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  table {
+    border-collapse: separate;
+  }
+  th {
+    width: unset;
+    font-family: "Regular";
+    padding: 1px 4px 4px 4px;
+    color: #606060;
+    font-size: 12px;
+  }
+  td {
+    //padding: 1px 0 1px 0;;
+    padding: 0 0 9px 0;
+    vertical-align: top;
+    //font-size: 14px;
+    font-size: 12px;
+  }
+}
+.collapsible-body {
+  th {
+    cursor: default;
+  }
+  td {
+    font-family: "Light";
+    white-space: nowrap;
+    cursor: default;
+  }
+}
+.collapsible-body {
+  color: $color;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  padding: 5px
+}
+.collapsible-header {
+  width: 100%;
+  background-color: $table-head-bgcolor;
+  border-bottom: none;
+  border-top: 1px solid $lead-color;
+  padding: 0;
+  cursor: pointer;
+}
+.collapsible-header:hover {
+  background-color: $menu-bgcolor-hover;
+}
+  // TODO: wrapper um das logo dann kann es 2px tiefer und steht vertical mittig in der row
+.mGLogo {
+  margin-top: 1px !important;
+  //border: 1px solid red;
+}
+/*
+.mGLogo img {
+  margin-top: 1px !important;
+  border: 1px solid red;
+}
+*/
+
+.modal {
+  background-color: $bgcolor-overlays;
+  color: #ffffff;
+}
+.input-field label {
+  pointer-events: auto;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Datepicker
+|--------------------------------------------------------------------------
+*/
+.picker__box {
+  background: $bg-color;
+}
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+  cursor: pointer;
+  color: #000000;
+  //background: $atmo-color;
+  background: transparent;
+  //border-right: .75em solid $atmo-color;
+  // TODO: hover für rechtslinks pfeile?
+}
+.picker__day--infocus {
+  color: $color;
+}
+.picker__day--infocus:hover {
+  color: $atmo-color-sec1;
+}
+.picker--focused .picker__day--disabled,
+.picker__day--disabled,
+.picker__day--disabled:hover{
+  background: #212121;
+  color: #474747 !important;
+  border-color: #212121;
+}
+.picker__date-display {
+  background-color: $atmo-color-sec3;
+}
+.picker__clear {
+  //color: $atmo-color-sec4;
+  color: $bg-color;
+  //color: #fff;
+  pointer-events: none;
+  cursor: default;
+  transition: none;
+}
+.picker__close, .picker__today {
+  color: $atmo-color-sec1;
+
+  //color: #fff;
+  //margin: 3px;
+}

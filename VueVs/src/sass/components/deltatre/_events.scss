@@ -1,0 +1,402 @@
+/*
+|--------------------------------------------------------------------------
+| Events anzeigen
+|--------------------------------------------------------------------------
+*/
+.eventsColorMarker {
+  min-width: 6px;
+  border-radius: 0;
+}
+.eventsColorMarker:after {
+  content: ' ';
+}
+.showEventsWrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 6px;
+}
+.eventsLogoBlock {
+  position: relative;
+  max-width: 160px;
+  min-height: 156px;
+  flex-grow: 1;
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 10px 3px 10px;
+  border: 2px solid $alt-line-color;
+  border-radius: 8px;
+}
+.eventsHeadline {
+  width: 99%;
+  padding-top: 2%;
+  padding-bottom: 6%;
+  color: $headline-color;
+  font-size: 11px;
+  font-family: 'Bold';
+  text-align: center;
+  line-height: 1;
+}
+.eventsTeamnameA {
+  min-height: 22px;
+}
+.eventsItemA {
+  min-height: 50px;
+  line-height: .9;
+}
+.eventsItemB {
+  min-height: 48px;
+  line-height: .9;
+  padding-bottom: 16px;
+}
+.eventsColor {
+  position: absolute;
+  top: 144px;
+  left: -2px;
+  min-height: 10px;
+  min-width: 160px;
+  width: 100px;
+  max-width: 160px;
+  border-left: 2px solid $alt-line-color;
+  border-right: 2px solid $alt-line-color;
+  border-bottom: 2px solid $alt-line-color;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.eventsColor1 {
+  background-color: $eventColor1;}
+.eventsColor2 {
+  background-color: $eventColor2;}
+.eventsColor3 {
+  background-color: $eventColor3;}
+.eventsColor4 {
+  background-color: $eventColor4;}
+.eventsColor5 {
+  background-color: $eventColor5;}
+.eventsColor6 {
+  background-color: $eventColor6;}
+.eventsColor7 {
+  background-color: $eventColor7;}
+.eventsColor8 {
+  background-color: $eventColor8;}
+.eventsColor9 {
+  background-color: $eventColor9;}
+
+.eventsLogoHeight {
+  width: auto;
+  height: 25px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.eventsLogoBlogDivider {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 2px 0;
+  border-top: 2px solid $alt-line-color;
+}
+
+
+.eventTable {
+  th {
+    padding: 3px 4px 3px 4px !important;
+    border-left: 1px solid $bg-color;
+    white-space: nowrap;
+   // cursor: pointer;
+  }
+  tr th:last-child,
+  tr th:first-child,
+  tr td:first-child,
+  tr td:last-child {
+    border: none;
+  }
+  tr {
+  //  cursor: pointer;
+  }
+  tr:hover {
+ //  background-color: #272727;
+  }
+  td {
+    padding: 3px 4px 3px 4px !important;
+    border-left: 1px solid $bg-color;
+    white-space: nowrap;
+  }
+}
+.tdA {
+  min-width: 94px;
+}
+.tdB {
+  min-width: 105px;
+  max-width: 105px;
+}
+.tdC {
+  min-width: 94px;
+  max-width: 94px;
+}
+.tdD {
+  min-width: 88px;
+}
+.tdComments {
+  min-width: 220px;
+  max-width: 220px;
+  cursor: default !important;
+}
+.eventTableGameCol {
+  min-width: 80px;
+}
+.selEventsChckbx {
+  top: 10px;
+  left: 10px;
+}
+.lastcell {
+  width: 100%;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Events Kommentare
+|--------------------------------------------------------------------------
+*/
+.eventsCommentAnchor {
+  position: relative;
+}
+@mixin eventsComment {
+ // height: 100%;
+  max-width: 350px;
+  white-space: normal;
+  font-size: 10px;
+  line-height: 100%;
+  float: right;
+  text-align: center;
+}
+.eventsCommentWrap {
+  z-index: 101;
+  width: 100%;
+  height: 50px;
+  max-height: 50px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  @include eventsComment;
+}
+.eventsCommentWrapEditable {
+  z-index: 102;
+  width: 380px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, width .3s ease-in-out;
+  position: absolute;
+  top: -22px;
+  //right: 0;
+  right: -80px;
+  @include eventsComment;
+  background-color: #272727;
+  font-size: 13px;
+}
+.eventsComment {
+  width: 80%;
+  overflow: hidden;
+}
+.eventsCommentWrapOuter {
+  position: relative;
+  white-space: normal;
+}
+.eventsIconOkCancelWrap {
+  position: absolute;
+  display: flex;
+  left: 82px;
+}
+.eventsIconEdit {
+  display: flex;
+  position: absolute;
+  z-index: 103;
+  top: -15px;
+  right: -17px;
+  //right: -97px;
+  width: 80px;
+  height: 35px;
+  padding-top: 2px;
+}
+.eventsBtnSave {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  //margin-right: 30px;
+  height: 25px;
+  width: 25px;
+}
+.eventsBtnSave:active {
+  background-color: transparent;
+}
+.eventsBtnSave:focus {
+  background-color: transparent;
+}
+.eventsBtnSave:hover {
+  .icon-ok {
+    fill: $atmo-color;
+  }
+}
+.eventsBtnCancel {
+  display: none;
+  width: 19px;
+  height: 19px;
+  stroke-width: 8px;
+  stroke: #242424;
+  // filter: drop-shadow(0 0 3px #141414);
+  cursor: pointer;
+  margin-top: 2px;
+  margin-left: 6px;
+  opacity: .5;
+  transition: stroke 0.2s ease-out;
+}
+.eventsBtnCancel:hover {
+  stroke: $atmo-color;
+}
+
+.eventsCommentHead {
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+ // width: 100%;
+ // height: 37px;
+  background-color: #3e3e3e;
+  box-shadow: 0 -4px 4px #1a1a1a;
+  border-right: 4px double #303030;
+  border-left: 4px double #303030;
+  border-top: 4px double #303030;
+  border-bottom: 2px solid #363636;
+}
+.eventsCommentWrapEditableText {
+  position: absolute;
+  z-index: 100;
+  height: 0;
+  width: 0;
+  transition: height .3s ease;
+  resize: none;
+  overflow: hidden;
+  padding: 22px 6px 11px 6px;
+  //border: 4px double #303030;
+  border-radius: 8px;
+  background-color: #3e3e3e;
+  text-align: center;
+  //box-shadow: 0 0 12px #111111;
+  box-shadow: 0 4px 4px #1a1a1a;
+  border-right: 4px double #303030;
+  border-left: 4px double #303030;
+  border-bottom: 4px double #303030;
+  //border-top: 1px solid #303030;
+  left: 0;
+  top: 18px;
+
+}
+.eventsCommentWrapEditableHidden {
+  display: none;
+  max-width: 350px;
+  white-space: normal;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Events Kommentar Navigation
+|--------------------------------------------------------------------------
+*/
+$preComnav: '.comNav-';
+$const: 0;
+$overlaywidth: 406 - $const;
+$comwidth: 410 - $const;
+$wrapperwidth: 326 - $const;
+$dividerwidth: 310 - $const;
+
+#{$preComnav}Disabler {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 15s ease-out;
+}
+#{$preComnav}Disabler:before {
+  content: '';
+}
+#{$preComnav}Overlay {
+  position: fixed;
+  z-index: 110;
+  background-color: $menu-bgcolor;
+  top: 0;
+  left: -#{$comwidth}px;
+  box-shadow: 5px 0 7px 0 rgba(0, 0, 0, .6);
+  width: #{$overlaywidth}px;
+  height: 100%;
+  padding: 142px 10px 0 8px;
+}
+#{$preComnav}Wrapper {
+  position: relative;
+  left: 76px;
+  display: flex;
+  margin: -5px -5px -4px;
+  width: #{$wrapperwidth}px;
+}
+#{$preComnav}Wrapper:hover {
+  background-color: $menu-bgcolor-hover;
+}
+#{$preComnav}Head {
+  font-size: 18px;
+  color: $headline-color;
+  text-align: center;
+  width: #{$wrapperwidth}px;
+  padding: 3px;
+  float: right;
+}
+#{$preComnav}Kom {
+  width: 310px;
+  order: 1;
+  padding: 6px 6px 12px 12px;
+ // border-bottom: 1px solid #dadada;
+  cursor: pointer;
+  color: #dadada;
+  font-size: 13px;
+}
+/*
+#{$preComnav}Kom:hover {
+  background-color: $menu-bgcolor-hover;
+}
+*/
+#{$preComnav}divider {
+  position: relative;
+  left: 80px;
+  width: #{$dividerwidth}px;
+  border-bottom: 1px solid #dadada;
+  margin: 9px 0 8px 0;
+}
+#{$preComnav}icons {
+  order: 2;
+  width: 32px;
+  margin-top: 3px;
+}
+#{$preComnav}iconPencil {
+  width: 18px;
+  height: 18px;
+//  fill: $deltaGreen;
+  fill: $atmo-color;
+ // margin-right: 8px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+#{$preComnav}iconSave {
+  width: 18px;
+  height: 18px;
+//  fill: $atmo-color;
+  fill: $deltaGreen;
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+//@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/vuetify/dist/vuetify.min";
+@import "materialize.scss";
+
+$color01: #a9db1e;
+$color02: #5bc0eb;
+$color03: #fde74c;
+$color04: #c3423f;
+$color05: #3f3f3f;
+
+body {
+  background-color: $color01;
+  color: $color05;
+}

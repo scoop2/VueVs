@@ -1,0 +1,179 @@
+/*
+|--------------------------------------------------------------------------
+| Filter
+|--------------------------------------------------------------------------
+*/
+.filterOverlay {
+  position: fixed;
+  top: -62px;
+  left: 0;
+  z-index: 120;
+  width: 100%;
+  background-color: $bg-color;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 6px;
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .5);
+  [type="checkbox"] + label {
+    padding-left: 22px;
+    white-space: nowrap;
+  }
+  label {
+    white-space: nowrap;
+  }
+  .btn {
+    height: 22px;
+    line-height: 24px;
+    white-space: nowrap;
+    padding: 0 6px 0 6px;
+    font-size: 13px;
+  }
+  #sbmtBtn {
+    width: 90%;
+    margin: 0;
+  }
+}
+
+.filterFavorites {
+  display: flex;
+  padding: 0 3px 0 3px;
+  border-top: 2px solid $bg-color;
+  background-color: $menu-bgcolor;
+}
+
+.filterWrap {
+  width: 100%;
+}
+
+.filterWrapBase {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 4px 0 1px;
+  color: $headline-color;
+  border: 2px solid $menu-bgcolor;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: $menu-bgcolor;
+}
+
+@mixin filterExpandMe {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 21px;
+  cursor: pointer;
+}
+
+.filterExpandMe-up {
+  @include filterExpandMe;
+}
+
+.filterExpandMe-down {
+  @include filterExpandMe;
+}
+
+.materializeBugKiller {
+  z-index: 90;
+  width: 100%;
+  height: 21px;
+  background-color: $menu-bgcolor;
+  border-top: 2px solid $bg-color;
+  border-left: 2px solid $menu-bgcolor;
+  border-right: 2px solid $menu-bgcolor;
+  border-bottom: 2px solid $menu-bgcolor;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: background-color .7s;
+}
+
+.materializeBugKiller:hover {
+  background-color: $alt-line-color;
+  border-top: 2px solid $menu-bgcolor;
+  opacity: 1;
+}
+
+.filterExpandMeItems {
+  text-align: center;
+}
+
+.filterCheckboxUnitFilterWrap {
+  flex-grow: 2;
+  white-space: nowrap;
+  padding: 3px;
+}
+
+.filterCheckboxUnit {
+  flex-grow: 1;
+  white-space: nowrap;
+  padding: 3px;
+}
+
+.filterRadioUnitXL {
+  flex-grow: 45;
+  text-align: center;
+}
+
+.filterRadioUnit {
+  flex-grow: 1;
+  margin-top: 2px;
+}
+
+.filterRadioUnitReload {
+  flex-grow: 1;
+  max-width: 70px;
+}
+
+.filterLoadPresets {
+  flex-grow: 2;
+  text-align: center;
+}
+
+.filterInputField {
+  margin-top: -5px !important;
+}
+.filterInputFieldShort {
+  display: none;
+  background-color: $menu-bgcolor;
+ // transition: background-color 2s ease-out;
+}
+.filterInputFieldLong {
+  display: none;
+  background-color: $menu-bgcolor;
+ // transition: background-color 2s ease-out;
+}
+.wrapperReload {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  max-height: 30px;
+  max-width: 370px;
+  margin-top: 3px;
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label {
+    padding-left: 23px;
+    padding-right: 10px;
+  }
+  .select-wrapper input.select-dropdown {
+    height: 17px;
+    margin: 7px 0 20px 0;
+  }
+  .caret {
+    color: #ffffff !important;
+  }
+}
+
+.radioColor {
+  color: $atmo-color-sec1;
+  padding-right: 4px;
+  min-width: 100px;
+}
+
+.switch {
+  border-bottom: 1px solid $menu-bgcolor;
+}

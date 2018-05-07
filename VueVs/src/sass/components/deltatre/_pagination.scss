@@ -1,0 +1,81 @@
+/*
+|--------------------------------------------------------------------------
+| Pagination
+|--------------------------------------------------------------------------
+*/
+.pagination {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pagInfo {
+  display: flex;
+  justify-content: center;
+}
+.pagInfoItem {
+  padding: 0 20px 0 0;
+}
+.pagination a {
+  color: #a1a1a1 !important;
+  text-decoration: none !important;
+}
+@mixin pagBase {
+  height: 40px;
+  padding: 4px;
+  margin: 4px;
+  text-align: center;
+  line-height: 1.9;
+  color: #949494;
+  cursor: pointer;
+}
+.pagItem {
+  @include pagBase;
+  flex: 1;
+  width: 40px;
+  background-color: $menu-bgcolor;
+  border: 2px solid #4b4b4b;
+  border-radius: 4px;
+  transition: all .25s ease;
+}
+.pagItem:hover {
+  border-color: #919191;
+  background-color: $menu-bgcolor-hover;
+  transition: all .25s ease;
+}
+.pagItemDis {
+  @include pagBase;
+  flex: 1;
+  width: 40px;
+  background-color: $menu-bgcolor;
+  border: 2px solid #4b4b4b;
+  border-radius: 4px;
+  transition: all .25s ease;
+  opacity: .4;
+  pointer-events: none;
+}
+.pagItemDis:hover {
+  border-color: #919191;
+  background-color: $menu-bgcolor-hover;
+  transition: all .25s ease;
+}
+.pagItemEnd {
+  flex: 5;
+  padding: 4px;
+}
+.pagItemEnd:before {
+  content: '';
+}
+.pagItemIcon {
+  @include pagBase;
+  flex: 0;
+  width: 30px;
+}
+.pagCurr {
+  background-color: #1b3d60;
+}
+.pagCurr:hover {
+  background-color: #1b3d60;
+}
