@@ -1,0 +1,55 @@
+[{
+    "cmty_no": 51,
+    "cmty_regular": 1,
+    "cmty_va_art": 51,
+    "cmty_supercompetition": 1,
+    "cmty_description": "Bundesliga                                                            "
+}, {
+    "cmty_no": 52,
+    "cmty_regular": 1,
+    "cmty_va_art": 52,
+    "cmty_supercompetition": 2,
+    "cmty_description": "2. Bundesliga                                                         "
+}, {
+    "cmty_no": 35,
+    "cmty_regular": 1,
+    "cmty_va_art": 35,
+    "cmty_supercompetition": 3,
+    "cmty_description": "3. Liga                                                               "
+}, {
+    "cmty_no": 72,
+    "cmty_regular": 1,
+    "cmty_va_art": 72,
+    "cmty_supercompetition": 7,
+    "cmty_description": "UEFA Champions League                                                 "
+}, {
+    "cmty_no": 99,
+    "cmty_regular": 1,
+    "cmty_va_art": 99,
+    "cmty_supercompetition": 9,
+    "cmty_description": "DFL Test                                                              "
+}, {
+    "cmty_no": 152,
+    "cmty_regular": 1,
+    "cmty_va_art": 152,
+    "cmty_supercompetition": 10,
+    "cmty_description": "Wiederholungsspiele 2. Bundesliga                                     "
+}, {
+    "cmty_no": 15,
+    "cmty_regular": 1,
+    "cmty_va_art": 15,
+    "cmty_supercompetition": 4,
+    "cmty_description": "Relegation Bundesliga / 2. Bundesliga                                 "
+}, {
+    "cmty_no": 16,
+    "cmty_regular": 1,
+    "cmty_va_art": 16,
+    "cmty_supercompetition": 5,
+    "cmty_description": "Relegation 2. Bundesliga / 3. Liga                                    "
+}, {
+    "cmty_no": 80,
+    "cmty_regular": 1,
+    "cmty_va_art": 80,
+    "cmty_supercompetition": 6,
+    "cmty_description": "FIFA Fußball-Weltmeisterschaft                                        "
+}]

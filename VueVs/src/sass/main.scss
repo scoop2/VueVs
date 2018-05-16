@@ -1,14 +1,20 @@
-//@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../../node_modules/vuetify/dist/vuetify.min";
 @import "materialize.scss";
-
 $color01: #a9db1e;
 $color02: #5bc0eb;
 $color03: #fde74c;
 $color04: #c3423f;
-$color05: #3f3f3f;
-
+$color05: #3f3f35;
 body {
   background-color: $color01;
   color: $color05;
+}
+
+nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+
+.wrap {
+  padding: 50px 6px 6px 6px;
 }

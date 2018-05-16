@@ -6,6 +6,10 @@
 
 
 
+
+
+
+
 <script>
   import Selector from './components/selector.vue';
   import Choicebox from './components/choicebox.vue';

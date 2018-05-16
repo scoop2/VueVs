@@ -3,9 +3,12 @@ import Vue from "vue";
 import Vuex from "vuex";
 //import $http from "vue-resource";
 import axios from "axios";
+import VueAxios from 'vue-axios';
 
-import VueAsyncProperties from "vue-async-properties";
-Vue.use(VueAsyncProperties);
+import $http from "vue-resource";
+
+//import VueAsyncProperties from "vue-async-properties";
+//Vue.use(VueAsyncProperties);
 
 //import Vuetify from "vuetify";
 
@@ -14,34 +17,28 @@ Vue.use(VueAsyncProperties);
 
 import formshow from "./components/testing/form.vue";
 import navigation from "./components/global/navigation.vue";
-//import ajaxLoader from "./plugins/ajaxLoader.js";
+import mockup from "./components/mockup/mockup.vue";
 
 require("./sass/main.scss");
 require("../node_modules/materialize-css/dist/js/materialize.min.js");
 //var Scripts = require("./libs/scripts.js");
 
-
-
-
-
-
-
 //import fetchData from "./libs/scripts.js";
 //Vue.use(Vuetify);
 //Vue.use(Scripts);
-/*
-Vue.component("navigation", {
-  template: "<h1>Welcome to coligo!</h1>"
-});
-*/
+
+
+
 
 Vue.use(Vuex);
+Vue.use(VueAxios, axios);
 
-new Vue({
+var vm = new Vue({
   el: "#app",
   components: {
     navigation,
-    formshow
+    formshow,
+    mockup
   },
   methods: {
     fetchData(url) {
@@ -51,21 +48,3 @@ new Vue({
     }
   }
 });
-
-/*
-new Vue({
-  el: "#app",
-  template: "<Nav/>",
-  components: {
-    nav: Nav
-  },
-  data: {
-    items: [
-      { title: "Home", link: "/home" },
-      { title: "Component Show", link: "/compshow" }
-    ],
-    message: "hello world!"
-  }
-});
-*/
-//page.compshow = new Vue({});

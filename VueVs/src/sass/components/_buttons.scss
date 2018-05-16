@@ -8,8 +8,7 @@
   line-height: $button-height;
   padding: $button-padding;
   text-transform: uppercase;
-  vertical-align: middle;
-  // Gets rid of tap active state
+  vertical-align: middle; // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -31,7 +30,6 @@
   box-shadow: none;
   color: $button-disabled-color !important;
   cursor: default;
-
   &:hover {
     background-color: $button-disabled-background !important;
     color: $button-disabled-color !important;
@@ -45,7 +43,6 @@
 .btn-flat {
   font-size: $button-font-size;
   outline: 0;
-
   i {
     font-size: $button-icon-font-size;
     line-height: inherit;
@@ -70,7 +67,6 @@
   @extend .z-depth-1;
   transition: .2s ease-out;
   cursor: pointer;
-
   &:hover {
     background-color: $button-raised-background-hover;
     @extend .z-depth-1-half;
@@ -83,34 +79,28 @@
     background-color: $button-floating-background-hover;
     @extend .z-depth-1-half;
   }
-
   &:before {
-    border-radius: 0;
+    border-radius: 1px;
   }
-
   &.btn-large {
     &.halfway-fab {
       bottom: -$button-floating-large-size / 2;
     }
-
     width: $button-floating-large-size;
     height: $button-floating-large-size;
     i {
       line-height: $button-floating-large-size;
     }
   }
-
   &.halfway-fab {
     &.left {
       right: auto;
       left: 24px;
     }
-
     position: absolute;
     right: 24px;
     bottom: -$button-floating-size / 2;
   }
-
   display: inline-block;
   color: $button-floating-color;
   position: relative;
@@ -126,7 +116,6 @@
   transition: .3s;
   cursor: pointer;
   vertical-align: middle;
-
   i {
     width: inherit;
     display: inline-block;
@@ -146,13 +135,11 @@ button.btn-floating {
 .fixed-action-btn {
   &.active {
     ul {
-     visibility: visible;
+      visibility: visible;
     }
   }
-
   &.horizontal {
     padding: 0 0 0 15px;
-
     ul {
       text-align: right;
       right: 64px;
@@ -160,38 +147,33 @@ button.btn-floating {
       transform: translateY(-50%);
       height: 100%;
       left: auto;
-      width: 500px; /*width 100% only goes to width of button container */
-
+      width: 500px;
+      /*width 100% only goes to width of button container */
       li {
         display: inline-block;
         margin: 15px 15px 0 0;
       }
     }
   }
-
   &.toolbar {
     &.active {
-      & > a i {
+      &>a i {
         opacity: 0;
       }
     }
-
     padding: 0;
     height: $button-floating-large-size;
-
     ul {
       display: flex;
       top: 0;
       bottom: 0;
       z-index: 1;
-
       li {
         flex: 1;
         display: inline-block;
         margin: 0;
         height: 100%;
         transition: none;
-
         a {
           display: block;
           overflow: hidden;
@@ -203,7 +185,6 @@ button.btn-floating {
           color: #fff;
           line-height: $button-floating-large-size;
           z-index: 1;
-
           i {
             line-height: inherit;
           }
@@ -211,14 +192,12 @@ button.btn-floating {
       }
     }
   }
-
   position: fixed;
   right: 23px;
   bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
   z-index: 997;
-
   ul {
     left: 0;
     right: 0;
@@ -227,16 +206,13 @@ button.btn-floating {
     bottom: 64px;
     margin: 0;
     visibility: hidden;
-
     li {
       margin-bottom: 15px;
     }
-
     a.btn-floating {
       opacity: 0;
     }
   }
-
   .fab-backdrop {
     position: absolute;
     top: 0;
@@ -257,16 +233,13 @@ button.btn-floating {
   color: $button-flat-color;
   cursor: pointer;
   transition: background-color .2s;
-
   &:focus,
   &:hover {
     box-shadow: none;
   }
-
   &:focus {
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0, 0, 0, .1);
   }
-
   &.disabled {
     background-color: transparent !important;
     color: $button-flat-disabled-color !important;
@@ -279,7 +252,6 @@ button.btn-floating {
   @extend .btn;
   height: $button-large-height;
   line-height: $button-large-height;
-
   i {
     font-size: $button-large-icon-font-size;
   }

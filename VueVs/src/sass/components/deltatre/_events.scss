@@ -3,18 +3,22 @@
 | Events anzeigen
 |--------------------------------------------------------------------------
 */
+
 .eventsColorMarker {
   min-width: 6px;
   border-radius: 0;
 }
+
 .eventsColorMarker:after {
   content: ' ';
 }
+
 .showEventsWrap {
   display: flex;
   justify-content: center;
   padding-bottom: 6px;
 }
+
 .eventsLogoBlock {
   position: relative;
   max-width: 160px;
@@ -26,6 +30,7 @@
   border: 2px solid $alt-line-color;
   border-radius: 8px;
 }
+
 .eventsHeadline {
   width: 99%;
   padding-top: 2%;
@@ -36,18 +41,22 @@
   text-align: center;
   line-height: 1;
 }
+
 .eventsTeamnameA {
   min-height: 22px;
 }
+
 .eventsItemA {
   min-height: 50px;
   line-height: .9;
 }
+
 .eventsItemB {
   min-height: 48px;
   line-height: .9;
   padding-bottom: 16px;
 }
+
 .eventsColor {
   position: absolute;
   top: 144px;
@@ -62,24 +71,42 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
 .eventsColor1 {
-  background-color: $eventColor1;}
+  background-color: $eventColor1;
+}
+
 .eventsColor2 {
-  background-color: $eventColor2;}
+  background-color: $eventColor2;
+}
+
 .eventsColor3 {
-  background-color: $eventColor3;}
+  background-color: $eventColor3;
+}
+
 .eventsColor4 {
-  background-color: $eventColor4;}
+  background-color: $eventColor4;
+}
+
 .eventsColor5 {
-  background-color: $eventColor5;}
+  background-color: $eventColor5;
+}
+
 .eventsColor6 {
-  background-color: $eventColor6;}
+  background-color: $eventColor6;
+}
+
 .eventsColor7 {
-  background-color: $eventColor7;}
+  background-color: $eventColor7;
+}
+
 .eventsColor8 {
-  background-color: $eventColor8;}
+  background-color: $eventColor8;
+}
+
 .eventsColor9 {
-  background-color: $eventColor9;}
+  background-color: $eventColor9;
+}
 
 .eventsLogoHeight {
   width: auto;
@@ -87,6 +114,7 @@
   padding-top: 3%;
   padding-bottom: 3%;
 }
+
 .eventsLogoBlogDivider {
   width: 80%;
   margin-left: auto;
@@ -95,13 +123,11 @@
   border-top: 2px solid $alt-line-color;
 }
 
-
 .eventTable {
   th {
     padding: 3px 4px 3px 4px !important;
     border-left: 1px solid $bg-color;
-    white-space: nowrap;
-   // cursor: pointer;
+    white-space: nowrap; // cursor: pointer;
   }
   tr th:last-child,
   tr th:first-child,
@@ -110,10 +136,10 @@
     border: none;
   }
   tr {
-  //  cursor: pointer;
+    //  cursor: pointer;
   }
   tr:hover {
- //  background-color: #272727;
+    //  background-color: #272727;
   }
   td {
     padding: 3px 4px 3px 4px !important;
@@ -121,47 +147,56 @@
     white-space: nowrap;
   }
 }
+
 .tdA {
   min-width: 94px;
 }
+
 .tdB {
   min-width: 105px;
   max-width: 105px;
 }
+
 .tdC {
   min-width: 94px;
   max-width: 94px;
 }
+
 .tdD {
   min-width: 88px;
 }
+
 .tdComments {
   min-width: 220px;
   max-width: 220px;
   cursor: default !important;
 }
+
 .eventTableGameCol {
   min-width: 80px;
 }
+
 .selEventsChckbx {
   top: 10px;
   left: 10px;
 }
+
 .lastcell {
   width: 100%;
 }
-
 
 /*
 |--------------------------------------------------------------------------
 | Events Kommentare
 |--------------------------------------------------------------------------
 */
+
 .eventsCommentAnchor {
   position: relative;
 }
+
 @mixin eventsComment {
- // height: 100%;
+  // height: 100%;
   max-width: 350px;
   white-space: normal;
   font-size: 10px;
@@ -169,6 +204,7 @@
   float: right;
   text-align: center;
 }
+
 .eventsCommentWrap {
   z-index: 101;
   width: 100%;
@@ -181,77 +217,84 @@
   transition: opacity .3s ease-in-out;
   @include eventsComment;
 }
+
 .eventsCommentWrapEditable {
   z-index: 102;
   width: 380px;
   opacity: 0;
   transition: opacity .3s ease-in-out, width .3s ease-in-out;
   position: absolute;
-  top: -22px;
-  //right: 0;
+  top: -22px; //right: 0;
   right: -80px;
   @include eventsComment;
   background-color: #272727;
   font-size: 13px;
 }
+
 .eventsComment {
   width: 80%;
   overflow: hidden;
 }
+
 .eventsCommentWrapOuter {
   position: relative;
   white-space: normal;
 }
+
 .eventsIconOkCancelWrap {
   position: absolute;
   display: flex;
   left: 82px;
 }
+
 .eventsIconEdit {
   display: flex;
   position: absolute;
   z-index: 103;
   top: -15px;
-  right: -17px;
-  //right: -97px;
+  right: -17px; //right: -97px;
   width: 80px;
   height: 35px;
   padding-top: 2px;
 }
+
 .eventsBtnSave {
   display: none;
   background: none;
   border: 0;
   padding: 0;
-  margin: 0;
-  //margin-right: 30px;
+  margin: 0; //margin-right: 30px;
   height: 25px;
   width: 25px;
 }
+
 .eventsBtnSave:active {
   background-color: transparent;
 }
+
 .eventsBtnSave:focus {
   background-color: transparent;
 }
+
 .eventsBtnSave:hover {
   .icon-ok {
     fill: $atmo-color;
   }
 }
+
 .eventsBtnCancel {
   display: none;
   width: 19px;
   height: 19px;
   stroke-width: 8px;
-  stroke: #242424;
-  // filter: drop-shadow(0 0 3px #141414);
+  stroke: #242424; // filter: drop-shadow(0 0 3px #141414);
   cursor: pointer;
   margin-top: 2px;
   margin-left: 6px;
   opacity: .5;
   transition: stroke 0.2s ease-out;
 }
+
 .eventsBtnCancel:hover {
   stroke: $atmo-color;
 }
@@ -262,9 +305,8 @@
   top: 0;
   left: 0;
   width: 0;
-  height: 0;
- // width: 100%;
- // height: 37px;
+  height: 0; // width: 100%;
+  // height: 37px;
   background-color: #3e3e3e;
   box-shadow: 0 -4px 4px #1a1a1a;
   border-right: 4px double #303030;
@@ -272,6 +314,7 @@
   border-top: 4px double #303030;
   border-bottom: 2px solid #363636;
 }
+
 .eventsCommentWrapEditableText {
   position: absolute;
   z-index: 100;
@@ -280,40 +323,36 @@
   transition: height .3s ease;
   resize: none;
   overflow: hidden;
-  padding: 22px 6px 11px 6px;
-  //border: 4px double #303030;
+  padding: 22px 6px 11px 6px; //border: 4px double #303030;
   border-radius: 8px;
   background-color: #3e3e3e;
-  text-align: center;
-  //box-shadow: 0 0 12px #111111;
+  text-align: center; //box-shadow: 0 0 12px #111111;
   box-shadow: 0 4px 4px #1a1a1a;
   border-right: 4px double #303030;
   border-left: 4px double #303030;
-  border-bottom: 4px double #303030;
-  //border-top: 1px solid #303030;
+  border-bottom: 4px double #303030; //border-top: 1px solid #303030;
   left: 0;
   top: 18px;
-
 }
+
 .eventsCommentWrapEditableHidden {
   display: none;
   max-width: 350px;
   white-space: normal;
 }
 
-
 /*
 |--------------------------------------------------------------------------
 | Events Kommentar Navigation
 |--------------------------------------------------------------------------
 */
+
 $preComnav: '.comNav-';
 $const: 0;
 $overlaywidth: 406 - $const;
 $comwidth: 410 - $const;
 $wrapperwidth: 326 - $const;
 $dividerwidth: 310 - $const;
-
 #{$preComnav}Disabler {
   display: none;
   position: fixed;
@@ -326,9 +365,11 @@ $dividerwidth: 310 - $const;
   opacity: 0;
   transition: opacity 15s ease-out;
 }
+
 #{$preComnav}Disabler:before {
   content: '';
 }
+
 #{$preComnav}Overlay {
   position: fixed;
   z-index: 110;
@@ -340,6 +381,7 @@ $dividerwidth: 310 - $const;
   height: 100%;
   padding: 142px 10px 0 8px;
 }
+
 #{$preComnav}Wrapper {
   position: relative;
   left: 76px;
@@ -347,9 +389,11 @@ $dividerwidth: 310 - $const;
   margin: -5px -5px -4px;
   width: #{$wrapperwidth}px;
 }
+
 #{$preComnav}Wrapper:hover {
   background-color: $menu-bgcolor-hover;
 }
+
 #{$preComnav}Head {
   font-size: 18px;
   color: $headline-color;
@@ -358,20 +402,22 @@ $dividerwidth: 310 - $const;
   padding: 3px;
   float: right;
 }
+
 #{$preComnav}Kom {
   width: 310px;
   order: 1;
-  padding: 6px 6px 12px 12px;
- // border-bottom: 1px solid #dadada;
+  padding: 6px 6px 12px 12px; // border-bottom: 1px solid #dadada;
   cursor: pointer;
   color: #dadada;
   font-size: 13px;
 }
+
 /*
 #{$preComnav}Kom:hover {
   background-color: $menu-bgcolor-hover;
 }
 */
+
 #{$preComnav}divider {
   position: relative;
   left: 80px;
@@ -379,24 +425,26 @@ $dividerwidth: 310 - $const;
   border-bottom: 1px solid #dadada;
   margin: 9px 0 8px 0;
 }
+
 #{$preComnav}icons {
   order: 2;
   width: 32px;
   margin-top: 3px;
 }
+
 #{$preComnav}iconPencil {
   width: 18px;
   height: 18px;
-//  fill: $deltaGreen;
-  fill: $atmo-color;
- // margin-right: 8px;
+  //  fill: $deltaGreen;
+  fill: $atmo-color; // margin-right: 8px;
   margin-top: 9px;
   cursor: pointer;
 }
+
 #{$preComnav}iconSave {
   width: 18px;
   height: 18px;
-//  fill: $atmo-color;
+  //  fill: $atmo-color;
   fill: $deltaGreen;
   cursor: pointer;
 }
