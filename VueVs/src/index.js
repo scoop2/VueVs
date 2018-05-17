@@ -1,24 +1,18 @@
 Vue.config.devtools = true;
 import Vue from "vue";
-import Vuex from "vuex";
-//import $http from "vue-resource";
+//import Vuex from "vuex";
 import axios from "axios";
-import VueAxios from 'vue-axios';
+import VueAxios from "vue-axios";
 
-import $http from "vue-resource";
 
-//import VueAsyncProperties from "vue-async-properties";
-//Vue.use(VueAsyncProperties);
 
-//import Vuetify from "vuetify";
-
-//import "vuetify/dist/vuetify.min.css";
-//import Vuecidity from "vuecidity";
-
-import formshow from "./components/testing/form.vue";
 import navigation from "./components/global/navigation.vue";
 import mockup from "./components/mockup/mockup.vue";
 
+//Vue.use(Vuex);
+Vue.use(VueAxios, axios);
+
+//require("./store.js");
 require("./sass/main.scss");
 require("../node_modules/materialize-css/dist/js/materialize.min.js");
 //var Scripts = require("./libs/scripts.js");
@@ -27,18 +21,23 @@ require("../node_modules/materialize-css/dist/js/materialize.min.js");
 //Vue.use(Vuetify);
 //Vue.use(Scripts);
 
+/*
+export const store = new Vuex.Store({
+  state: {
+    safelyStoredNumber: 0
+  }
+});
+*/
 
 
 
-Vue.use(Vuex);
-Vue.use(VueAxios, axios);
-
-var vm = new Vue({
+new Vue({
+  //store,
   el: "#app",
   components: {
     navigation,
-    formshow,
-    mockup
+    mockup,
+
   },
   methods: {
     fetchData(url) {

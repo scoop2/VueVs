@@ -1,69 +1,86 @@
 <template>
 <div class="form-wrapper">
 
-<div class="input-field col s12" v-on:click="getData">
-    <select v-model="selectA" v-on:change="getnext" id="sA" name="gattung">
+<div>
+  <div class="input-field col s12">
+    <select v-model="selectA" name="selectA" v-on:change="updateSelectB">
       <option value="" disabled selected>Wähle aus</option>
       <option v-for="option in optionsA" v-bind:value="option.cmty_no">{{ option.cmty_description }}</option>
     </select>
     <label>Competition:</label>
   </div>
-<div>{{ selectA }}</div>
+</div>
+
+  <div>
+    <div class="input-field col s12">
+    <select v-model="selectB" name="selectB" v-on:change="updateSelectC">
+      <option value="" disabled selected>Wähle aus</option>
+      <option v-for="option in optionsB" v-bind:value="option.jahr">{{ option.jahr }}</option>
+    </select>
+    <label>Competition:</label>
+  </div>
+</div>
+
+  <div>
+    <div class="input-field col s12">
+    <select v-model="selectC" name="selectC">
+      <option value="" disabled selected>Wähle aus</option>
+      <option v-for="option in optionsC" v-bind:value="option.cmty_no">{{ option.cmty_description }}</option>
+    </select>
+    <label>Competition:</label>
+  </div>
+</div>
+
 </div>
 </template>
 
 
 <script>
+//import select from "./components/mockup/select.vue";
+//import selectmenuA from "../../components/mockup/selectmenuA.vue";
+//import selectmenuB from "../../components/mockup/selectmenuB.vue";
+//import selectmenuC from "../../components/mockup/selectmenuC.vue";
+
 export default {
   data() {
     return {
-      message: "",
       optionsA: [],
-      selectA: []
+      optionsB: [],
+      optionsC: [],
+      selectA: [],
+      selectB: [],
+      selectC: []
     };
+  },
+  components: {
+    //selectmenuA,
+    //selectmenuB,
+    //selectmenuC
   },
 
   methods: {
-    getData: function() {
-      this.axios
-        .get("http://localhost:3001/Content/data/call1.json")
-        .then(response => (this.sepp = response.data))
+    updateSelectB: function() {
+      var response = this.axios
+        .get("http://localhost:3001/Content/data/call2.json")
+        .then(response => (this.optionsB = response.data))
         .then(function() {
-          var instances = M.FormSelect.init(elems);
+          var instances = M.FormSelect.init($("select"));
         })
         .catch(function(error) {
           console.log(error);
         });
     },
-
-    getnext: function() {},
-    getDataX: function(url) {
-      $.getJSON({
-        type: "GET",
-        headers: {
-          "Access-Control-Allow-Origin": true
-        },
-        jsonp: "mycallback",
-        url: "http://localhost:3001/Content/data/call1.json",
-        crossDomain: true,
-        dataType: "json",
-        timeout: 10000,
-        cache: true,
-        async: true,
-        success: function(data) {
-          this.optionsA = data;
-          console.log(this.optionsA);
-          return;
-        },
-        error: function(parsedjson, textStatus, errorThrown) {
-          console.warn(errorThrown);
-        },
-        complete: function() {}
-      });
+    updateSelectC: function() {
+      var response = this.axios
+        .get("http://localhost:3001/Content/data/call1.json")
+        .then(response => (this.optionsC = response.data))
+        .then(function() {
+          var instances = M.FormSelect.init($("select"));
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     }
-  },
-  watch: {
-    optionsA: function(val) {}
   },
   created: function() {},
   mounted: function() {
