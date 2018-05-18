@@ -12,38 +12,20 @@ import mockup from "./components/mockup/mockup.vue";
 //Vue.use(Vuex);
 Vue.use(VueAxios, axios);
 
-//require("./store.js");
+require("./store.js");
+require("./axios.config.js");
 require("./sass/main.scss");
 require("../node_modules/materialize-css/dist/js/materialize.min.js");
-//var Scripts = require("./libs/scripts.js");
 
-//import fetchData from "./libs/scripts.js";
-//Vue.use(Vuetify);
-//Vue.use(Scripts);
+var Scripts = require("./libs/scripts.js");
 
-/*
-export const store = new Vuex.Store({
-  state: {
-    safelyStoredNumber: 0
-  }
-});
-*/
+//console.log(axioscfg)
 
-
-
-new Vue({
-  //store,
+var app = new Vue({
+  //store: store,
   el: "#app",
   components: {
     navigation,
-    mockup,
-
-  },
-  methods: {
-    fetchData(url) {
-      this.$http.get(url).then(response => {
-        this.jsonData = response.body;
-      });
-    }
+    mockup
   }
 });
